@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    min-height: 100vh; /* Mudança para garantir que ocupe toda a altura da tela */
     margin: 0;
 }
 
@@ -13,6 +13,20 @@ button {
     background-color: #64A712;
     color: white;
     font-family: "Bai Jamjuree", sans-serif;
+    padding: 10px 20px; /* Adicionado padding para melhorar o tamanho do botão */
+    border: none; /* Removido a borda para um visual mais limpo */
+    border-radius: 5px; /* Bordas arredondadas para suavizar o visual */
+    cursor: pointer; /* Melhor interatividade */
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+button:hover {
+    background-color: #528E0D; /* Mudança na cor de fundo ao passar o mouse */
+}
+
+button:focus {
+    outline: none; /* Remove o contorno padrão ao focar no botão */
+    box-shadow: 0 0 0 3px rgba(100, 167, 18, 0.5); /* Adiciona uma borda de foco personalizada */
 }
 
 .passo {
@@ -20,14 +34,17 @@ button {
 }
 
 .passo.ativo {
-    display:block;
+    display: block;
 }
 
 main {
     text-align: center;
     max-width: 90%;
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
+    margin: 0 10%; /* Margens laterais para dar um espaçamento */
 }
 
 img {
     max-width: 90%;
+    height: auto; /* Garantir que a altura das imagens seja proporcional */
 }
